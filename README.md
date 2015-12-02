@@ -165,3 +165,5 @@ expect(response).to.be.a("array");
 ~~~
 
 %%%
+
+<a href='https://learn.co/lessons/ruby-repl-assertion-test' data-visibility='hidden'>View this lesson on Learn.co</a>
