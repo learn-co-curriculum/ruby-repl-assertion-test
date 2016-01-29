@@ -113,4 +113,4 @@ assert_length(response, 4)
 
 %%%
 
-<a href='https://learn.co/lessons/ruby-repl-assertion-test' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-repl-assertion-test' title='Ruby Methods Code Challenge'>Ruby Methods Code Challenge</a> on Learn.co and start learning to code for free.</p>
