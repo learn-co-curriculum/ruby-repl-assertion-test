@@ -5,24 +5,17 @@
 2. Review `puts` method
 3. Review explicit `return`
 
-%%%
+???
 
 # Code Challenge I: Mass Assignment
 
-Define a class, School, that initializes with a name and a location. The class should also have `attr_accessor`s for name and location. The initialize method should use keyword arguments for those attributes. Then, instantiate a new instance of the School class using mass assignment.
+Define a class, School, that initializes with a name and a location. The class should also have `attr_accessor`s for `name` and `location`. The initialize method should use keyword arguments for those attributes.
 
-~~~ruby
+?: Which snippet correctly implements the above spec?
 
-class School
-  # your code here
-end
+(x)
 
-school_attributes = {name: "The Flatiron School", location: "11 Broadway, NY, NY"}
-
-# instantiate your instance of School here, using mass assignment with the above school_attributes
-
-~~~solution
-
+``` ruby
 class School
   attr_accessor :name, :location
 
@@ -31,86 +24,106 @@ class School
     @location = location
   end
 end
+```
 
-school_attributes = { name: "The Flatiron School", location: "11 Broadway, NY, NY" }
+( )
 
-School.new(school_attributes)
+``` ruby
+class School
+  attr_accessor :name, :location
 
-~~~validation
+  def initialize(*args)
+    @name = args[0]
+    @location = args[1]
+  end
+end
+```
 
-assert_type(response, School)
-assert_equal(response.name, "The Flatiron School")
-assert_equal(response.location, "11 Broadway, NY, NY")
+( )
 
-~~~
+``` ruby
+class School
+  attr_accessor :name, :location
 
-%%%
+  def initialize(name, location)
+    @name = name
+    @location = location
+  end
+end
+```
 
-%%%
+???
+
+???
 
 # Code Challenge II: Puts Method
 
-Write a method that `puts` "ruby" 3 times.
+?: Which method `puts` `"ruby"` 3 times?
 
-~~~ruby
+( )
 
+``` ruby
 def puts_ruby_three_times
-  # code your solution here
+  3.times do
+    "ruby"
+  end
 end
+```
 
-# do not remove the line below
+(x)
 
-puts_ruby_three_times
-
-~~~solution
-
+``` ruby
 def puts_ruby_three_times
   3.times do
     puts "ruby"
   end
 end
+```
 
-puts_ruby_three_times
+( )
 
-~~~validation
+``` ruby
+def puts_ruby_three_times
+  3.do
+    puts "ruby"
+  end
+end
+```
 
-assert_output(response, "ruby\nruby\nruby\n")
+???
 
-~~~
+???
 
-%%%
-
-%%%
 
 # Code Challenge III: Explicit Return
 
-Write a method that returns 'ruby'
+?: Which method(s) return(s) `'ruby'`?
 
-~~~ruby
+(x)
 
-def returns_ruby
-  # code your solution here
-end
-
-# do not remove the line below
-
-returns_ruby
-
-~~~solution
-
-def returns_ruby
+``` ruby
+def return_ruby
   return "ruby"
 end
+```
 
-returns_ruby
+(x)
 
-~~~validation
+``` ruby
+def return_ruby
+  "ruby"
+end
+```
 
-assert_output(response, "ruby")
-assert_length(response, 4)
+( )
 
-~~~
+``` ruby
+def return_ruby
+  puts 'ruby'
+end
+```
 
-%%%
+???
+
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-repl-assertion-test' title='Ruby Methods Code Challenge'>Ruby Methods Code Challenge</a> on Learn.co and start learning to code for free.</p>
